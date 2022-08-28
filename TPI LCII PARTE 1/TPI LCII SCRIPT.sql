@@ -15,7 +15,7 @@ CREATE TABLE CIUDADES(
 id_ciudad		int IDENTITY(1,1),
 ciudad			varchar(100) NOT NULL,
 id_provincia	int NOT NULL,
-	CONSTRAINT pk_ciudades PRIMARY KEY (id_ciudad)
+	CONSTRAINT pk_ciudades PRIMARY KEY (id_ciudad),
 	CONSTRAINT fk_ciudades_provincias FOREIGN KEY (id_provincia)
 		REFERENCES PROVINCIAS (id_provincia)
 )
@@ -24,7 +24,7 @@ CREATE TABLE BARRIOS(
 id_barrio	int IDENTITY(1,1),
 barrio		varchar(100) NOT NULL,
 id_ciudad	int NOT NULL,
-	CONSTRAINT pk_barrios PRIMARY KEY (id_barrio)
+	CONSTRAINT pk_barrios PRIMARY KEY (id_barrio),
 	CONSTRAINT fk_barrios_ciudades FOREIGN KEY (id_ciudad)
 		REFERENCES CIUDADES (id_ciudad)
 )
@@ -33,23 +33,38 @@ CREATE TABLE PERSONAS(
 id_persona		int IDENTITY(1,1),
 nombre			varchar(100) NOT NULL,
 apellido		varchar(100) NOT NULL,
-documento		int NOT NULL,
-dire_persona	varchar(100) NOT NULL,
-id_barrio		int NOT NULL,
-	CONSTRAINT pk_personas PRIMARY KEY (id_persona)
+documento		bigint,
+contacto		varchar(200),
+dire_persona	varchar(100),
+id_barrio		int,
+	CONSTRAINT pk_personas PRIMARY KEY (id_persona),
 	CONSTRAINT fk_personas_barrios FOREIGN KEY (id_barrio)
 		REFERENCES BARRIOS (id_barrio)
 )
 
-CREATE TABLE EMPRESAS(
-id_empresa		int IDENTITY(1,1),
-razon_social	varchar(100) NOT NULL,
-dire_empresa	varchar(100) NOT NULL,
-cuit			int NOT NULL,
-id_barrio		int NOT NULL,
-	CONSTRAINT pk_empresas PRIMARY KEY (id_empresa)
-	CONSTRAINT fk_empresas_barrios FOREIGN KEY (id_barrio)
+CREATE TABLE TIPO_CLIENTES(
+id_tipo_cliente		int IDENTITY(1,1),
+tipo_cliente		varchar(100) NOT NULL,
+razon_social		varchar(100),
+dire_empresa		varchar(100),
+cuit				bigint,
+contacto			varchar(200),
+descuento			numeric(5,2),
+id_barrio			int,
+	CONSTRAINT pk_tipo_clientes PRIMARY KEY (id_tipo_cliente),
+	CONSTRAINT fk_tipo_clientes_barrios FOREIGN KEY (id_barrio)
 		REFERENCES BARRIOS (id_barrio)
+)
+
+CREATE TABLE CLIENTES(
+id_cliente			int IDENTITY(1,1),
+id_persona			int NOT NULL,
+id_tipo_cliente		int NOT NULL,
+	CONSTRAINT pk_clientes PRIMARY KEY (id_cliente),
+	CONSTRAINT fk_clientes_personas FOREIGN KEY (id_persona)
+		REFERENCES PERSONAS (id_persona),
+	CONSTRAINT fk_clientes_tipo_clientes FOREIGN KEY (id_tipo_cliente)
+		REFERENCES TIPO_CLIENTES (id_tipo_cliente)
 )
 
 CREATE TABLE TIPO_EMPLEADOS(
@@ -62,13 +77,10 @@ CREATE TABLE EMPLEADOS(
 id_empleado			int IDENTITY(1,1),
 id_tipo_empleado	int NOT NULL,
 cuit				int NOT NULL,
-	CONSTRAINT pk_empleados PRIMARY KEY (id_empleado)
+	CONSTRAINT pk_empleados PRIMARY KEY (id_empleado),
 	CONSTRAINT fk_empleados_tipo_empleados FOREIGN KEY (id_tipo_empleado)
 		REFERENCES TIPO_EMPLEADOS (id_tipo_empleado)
 )
-
-
-
 
 CREATE TABLE MARCAS(
 id_marca	int IDENTITY(1,1),
@@ -86,13 +98,82 @@ CREATE TABLE PRODUCTOS(
 id_producto			int IDENTITY(1,1),
 modelo				varchar(100) NOT NULL,
 anio				int NOT NULL,
+precio_vta			numeric (10,2) NOT NULL,
 id_marca			int NOT NULL,	
 id_tipo_producto	int NOT NULL,
-	CONSTRAINT pk_productos PRIMARY KEY (id_producto)
+	CONSTRAINT pk_productos PRIMARY KEY (id_producto),
 	CONSTRAINT fk_productos_marcas FOREIGN KEY (id_marca)
-		REFERENCES MARCAS (id_marca)
+		REFERENCES MARCAS (id_marca),
 	CONSTRAINT fk_productos_tipo_productos FOREIGN KEY (id_tipo_producto)
 		REFERENCES TIPO_PRODUCTOS (id_tipo_producto)
 )
+
+CREATE TABLE PEDIDOS(
+id_pedido			int IDENTITY(1,1),
+id_empleado			int NOT NULL,
+id_cliente			int NOT NULL,
+fecha_pedido		datetime NOT NULL,
+fecha_entrega		datetime NOT NULL,
+	CONSTRAINT pk_pedidos PRIMARY KEY (id_pedido),
+	CONSTRAINT fk_pedidos_empleados FOREIGN KEY (id_empleado)
+		REFERENCES EMPLEADOS (id_empleado),
+	CONSTRAINT fk_pedidos_clientes FOREIGN KEY (id_cliente)
+		REFERENCES CLIENTES (id_cliente),
+)
+
+CREATE TABLE DETALLE_PEDIDOS(
+id_detalle_pedido		int IDENTITY(1,1),
+id_pedido				int NOT NULL,
+id_producto				int NOT NULL,
+precio_unitario			numeric(10,2) NOT NULL,
+cantidad				smallint NOT NULL,
+	CONSTRAINT pk_detalle_pedidos PRIMARY KEY (id_detalle_pedido),
+	CONSTRAINT fk_detalle_pedidos_pedidos FOREIGN KEY (id_pedido)
+		REFERENCES PEDIDOS (id_pedido),
+	CONSTRAINT fk_detalle_pedidos_productos FOREIGN KEY (id_producto)
+		REFERENCES PRODUCTOS (id_producto)
+)
+
+CREATE TABLE METODO_PAGOS(
+id_metodo_pago		int IDENTITY(1,1),
+metodo_pago			varchar(100),
+	CONSTRAINT pk_metodo_pagos PRIMARY KEY (id_metodo_pago)
+)
+
+CREATE TABLE TIPO_ENVIOS(
+id_tipo_envio		int IDENTITY(1,1),
+tipo_envio			varchar(100),
+	CONSTRAINT pk_tipo_envios PRIMARY KEY (id_tipo_envio)
+)
+
+CREATE TABLE FACTURAS(
+id_factura				int IDENTITY(1,1),
+id_detalle_pedido		int NOT NULL,
+fecha_factura			datetime NOT NULL,
+id_metodo_pago			int NOT NULL,
+id_tipo_envio			int,
+	CONSTRAINT pk_facturas PRIMARY KEY (id_factura),
+	CONSTRAINT fk_facturas_detalle_pedidos FOREIGN KEY (id_detalle_pedido)
+		REFERENCES DETALLE_PEDIDOS (id_detalle_pedido),
+	CONSTRAINT fk_facturas_metodo_pagos FOREIGN KEY (id_metodo_pago)
+		REFERENCES METODO_PAGOS (id_metodo_pago),
+	CONSTRAINT fk_facturas_tipo_envios FOREIGN KEY (id_tipo_envio)
+		REFERENCES TIPO_ENVIOS (id_tipo_envio)
+)
+
+CREATE TABLE DETALLE_FACTURAS(
+id_detalle_factura		int IDENTITY(1,1),
+id_factura				int NOT NULL,
+id_producto				int,
+precio_unitario			numeric(10,2),
+cantidad				smallint,
+	CONSTRAINT pk_detalle_facturas PRIMARY KEY (id_detalle_factura),
+	CONSTRAINT fk_detalle_facturas_facturas FOREIGN KEY (id_factura)
+		REFERENCES FACTURAS (id_factura),
+	CONSTRAINT fk_detalle_facturas_productos FOREIGN KEY (id_producto)
+		REFERENCES PRODUCTOS (id_producto)
+)
+;
+
 
 

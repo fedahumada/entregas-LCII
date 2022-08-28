@@ -75,11 +75,14 @@ tipo_empleado		varchar(100) NOT NULL,
 
 CREATE TABLE EMPLEADOS(
 id_empleado			int IDENTITY(1,1),
+id_persona			int NOT NULL,
 id_tipo_empleado	int NOT NULL,
 cuit				int NOT NULL,
 	CONSTRAINT pk_empleados PRIMARY KEY (id_empleado),
 	CONSTRAINT fk_empleados_tipo_empleados FOREIGN KEY (id_tipo_empleado)
-		REFERENCES TIPO_EMPLEADOS (id_tipo_empleado)
+		REFERENCES TIPO_EMPLEADOS (id_tipo_empleado),
+	CONSTRAINT fk_empleados_personas FOREIGN KEY (id_persona)
+		REFERENCES PERSONAS (id_persona)
 )
 
 CREATE TABLE MARCAS(

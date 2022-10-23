@@ -90,14 +90,20 @@ namespace ConsultasAutomotriz
             ///////////////////////////////////////////////////////////////////////////////////////////
             if (cboIntegrante.Text == "Matias-Nicolas-Villarruel" && rbC1.Checked == true)
             {
-                
-                //dgvResultados.DataSource = helper.Consultar("SP_VILLARRUEL_1");
+                string input = "Mostrar los montos totales mensuales facturados por cliente y además del promedio\nde ese monto y el promedio de precio de artículos Todos esto datos correspondientes\nal año en curso.";
+                lstEnunciado.Items.Clear();
+                var lines = input.Split('\n').ToArray();
+                lstEnunciado.Items.AddRange(lines);
+                dgvResultados.DataSource = helper.Consultar("SP_VILLARRUEL_1");
                 
             }
             if (cboIntegrante.Text == "Matias-Nicolas-Villarruel" && rbC2.Checked == true)
             {
-
-                //dgvResultados.DataSource = helper.Consultar("SP_VILLARRUEL_2");
+                string input = "Muestra el detalle de facturas y los mejores 3 vendedores, muestre cuánto fue el total\nanual facturado por cada vendedor, para las facturas del corriente año, siempre y cuando\nque el promedio del monto facturado sea inferior al promedio de ese año. ";
+                lstEnunciado.Items.Clear();
+                var lines = input.Split('\n').ToArray();
+                lstEnunciado.Items.AddRange(lines);
+                dgvResultados.DataSource = helper.Consultar("SP_VILLARRUEL_2");
                 
             }
         }

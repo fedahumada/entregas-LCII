@@ -20,4 +20,3 @@ C:\AHUFEDE\REPOSITORIOS GITHUB\entregas-LCII\TPI LCII PARTE 3\ConsultasAutomotri
 C:\AHUFEDE\REPOSITORIOS GITHUB\entregas-LCII\TPI LCII PARTE 3\ConsultasAutomotriz\obj\Debug\ConsultasAutomotriz.csproj.CoreCompileInputs.cache
 C:\AHUFEDE\REPOSITORIOS GITHUB\entregas-LCII\TPI LCII PARTE 3\ConsultasAutomotriz\obj\Debug\ConsultasAutomotriz.exe
 C:\AHUFEDE\REPOSITORIOS GITHUB\entregas-LCII\TPI LCII PARTE 3\ConsultasAutomotriz\obj\Debug\ConsultasAutomotriz.pdb
-C:\AHUFEDE\REPOSITORIOS GITHUB\entregas-LCII\TPI LCII PARTE 3\ConsultasAutomotriz\obj\Debug\ConsultasAutomotriz.codigo.resources

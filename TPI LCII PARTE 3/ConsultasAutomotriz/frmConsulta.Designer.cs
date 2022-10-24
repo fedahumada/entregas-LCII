@@ -32,7 +32,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvResultados = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnCodigo = new System.Windows.Forms.Button();
             this.rbC2 = new System.Windows.Forms.RadioButton();
             this.rbC1 = new System.Windows.Forms.RadioButton();
             this.btnConsultar = new System.Windows.Forms.Button();
@@ -67,7 +66,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnCodigo);
             this.groupBox1.Controls.Add(this.rbC2);
             this.groupBox1.Controls.Add(this.rbC1);
             this.groupBox1.Controls.Add(this.btnConsultar);
@@ -80,19 +78,10 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros:";
             // 
-            // btnCodigo
-            // 
-            this.btnCodigo.Location = new System.Drawing.Point(279, 77);
-            this.btnCodigo.Name = "btnCodigo";
-            this.btnCodigo.Size = new System.Drawing.Size(111, 23);
-            this.btnCodigo.TabIndex = 7;
-            this.btnCodigo.Text = "Ver Codigo";
-            this.btnCodigo.UseVisualStyleBackColor = true;
-            // 
             // rbC2
             // 
             this.rbC2.AutoSize = true;
-            this.rbC2.Location = new System.Drawing.Point(146, 81);
+            this.rbC2.Location = new System.Drawing.Point(177, 81);
             this.rbC2.Name = "rbC2";
             this.rbC2.Size = new System.Drawing.Size(75, 17);
             this.rbC2.TabIndex = 6;
@@ -103,7 +92,7 @@
             // rbC1
             // 
             this.rbC1.AutoSize = true;
-            this.rbC1.Location = new System.Drawing.Point(50, 81);
+            this.rbC1.Location = new System.Drawing.Point(64, 81);
             this.rbC1.Name = "rbC1";
             this.rbC1.Size = new System.Drawing.Size(75, 17);
             this.rbC1.TabIndex = 5;
@@ -147,7 +136,7 @@
             // 
             this.lstEnunciado.FormattingEnabled = true;
             this.lstEnunciado.HorizontalScrollbar = true;
-            this.lstEnunciado.Location = new System.Drawing.Point(420, 18);
+            this.lstEnunciado.Location = new System.Drawing.Point(420, 17);
             this.lstEnunciado.Name = "lstEnunciado";
             this.lstEnunciado.Size = new System.Drawing.Size(403, 121);
             this.lstEnunciado.TabIndex = 4;
@@ -156,7 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(841, 375);
+            this.ClientSize = new System.Drawing.Size(841, 371);
             this.Controls.Add(this.lstEnunciado);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -184,7 +173,6 @@
         private System.Windows.Forms.ComboBox cboIntegrante;
         private System.Windows.Forms.RadioButton rbC2;
         private System.Windows.Forms.RadioButton rbC1;
-        private System.Windows.Forms.Button btnCodigo;
         private System.Windows.Forms.ListBox lstEnunciado;
     }
 }

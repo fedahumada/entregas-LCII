@@ -61,7 +61,7 @@ namespace ConsultasAutomotriz
             }
             if (cboIntegrante.Text == "Diego-Nicolas-Guizzo" && rbC2.Checked == true)
             {
-                string input = "El Area de RRHH y Comercializaciònd, a los efectos de evaluar el objetivo\nde ventas por volumen e importe y determniación de Bono para empleados\nanual en funcion de su histórico de pedidos, se necesita determinar una\nconsulta que verifique aquellos empleados cuyo promedio de pedidos sea \nmayor al promedio de pedidos general de este año, la cantidad total de \nunidades vendidas, y determinar el importe del bono como un % del promedio \nponderado de acuerdo a una escala 15% para importes superiores a $1000.000 \ny el resto 10%, y siempre que en los ultimos 6 meses haya vendido al menos \nuna unidad";
+                string input = "El Area de RRHH y Comercializaciòn, a los efectos de evaluar el objetivo\nde ventas por volumen e importe y determniación de Bono para empleados\nanual en funcion de su histórico de pedidos, se necesita determinar una\nconsulta que verifique aquellos empleados cuyo promedio de pedidos sea \nmayor al promedio de pedidos general de este año, la cantidad total de \nunidades vendidas, y determinar el importe del bono como un % del promedio \nponderado de acuerdo a una escala 15% para importes superiores a $1000.000 \ny el resto 10%, y siempre que en los ultimos 6 meses haya vendido al menos \nuna unidad";
                 lstEnunciado.Items.Clear();
                 var lines = input.Split('\n').ToArray();
                 lstEnunciado.Items.AddRange(lines);

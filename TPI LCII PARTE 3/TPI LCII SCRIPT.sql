@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [AUTOMOTRIZ]    Script Date: 23/10/2022 23:02:20 ******/
+/****** Object:  Database [AUTOMOTRIZ]    Script Date: 26/10/2022 23:09:32 ******/
 CREATE DATABASE [AUTOMOTRIZ]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -80,7 +80,7 @@ ALTER DATABASE [AUTOMOTRIZ] SET QUERY_STORE = OFF
 GO
 USE [AUTOMOTRIZ]
 GO
-/****** Object:  Table [dbo].[BARRIOS]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  Table [dbo].[BARRIOS]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -95,7 +95,7 @@ CREATE TABLE [dbo].[BARRIOS](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CIUDADES]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  Table [dbo].[CIUDADES]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -110,7 +110,7 @@ CREATE TABLE [dbo].[CIUDADES](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CLIENTES]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  Table [dbo].[CLIENTES]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -125,7 +125,7 @@ CREATE TABLE [dbo].[CLIENTES](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[DETALLES]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  Table [dbo].[DETALLES]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -143,7 +143,7 @@ CREATE TABLE [dbo].[DETALLES](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[EMPLEADOS]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  Table [dbo].[EMPLEADOS]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -159,7 +159,7 @@ CREATE TABLE [dbo].[EMPLEADOS](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[FACTURAS]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  Table [dbo].[FACTURAS]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -175,7 +175,7 @@ CREATE TABLE [dbo].[FACTURAS](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[MARCAS]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  Table [dbo].[MARCAS]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -189,7 +189,7 @@ CREATE TABLE [dbo].[MARCAS](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[METODO_PAGOS]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  Table [dbo].[METODO_PAGOS]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -203,7 +203,7 @@ CREATE TABLE [dbo].[METODO_PAGOS](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PEDIDOS]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  Table [dbo].[PEDIDOS]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -221,7 +221,7 @@ CREATE TABLE [dbo].[PEDIDOS](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PERSONAS]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  Table [dbo].[PERSONAS]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -240,7 +240,7 @@ CREATE TABLE [dbo].[PERSONAS](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PRODUCTOS]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  Table [dbo].[PRODUCTOS]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -259,7 +259,7 @@ CREATE TABLE [dbo].[PRODUCTOS](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PROVINCIAS]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  Table [dbo].[PROVINCIAS]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -273,7 +273,7 @@ CREATE TABLE [dbo].[PROVINCIAS](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TIPO_CLIENTES]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  Table [dbo].[TIPO_CLIENTES]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -293,7 +293,7 @@ CREATE TABLE [dbo].[TIPO_CLIENTES](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TIPO_EMPLEADOS]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  Table [dbo].[TIPO_EMPLEADOS]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -307,7 +307,7 @@ CREATE TABLE [dbo].[TIPO_EMPLEADOS](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TIPO_ENVIOS]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  Table [dbo].[TIPO_ENVIOS]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -321,7 +321,7 @@ CREATE TABLE [dbo].[TIPO_ENVIOS](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TIPO_PRODUCTOS]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  Table [dbo].[TIPO_PRODUCTOS]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -425,12 +425,12 @@ REFERENCES [dbo].[BARRIOS] ([id_barrio])
 GO
 ALTER TABLE [dbo].[TIPO_CLIENTES] CHECK CONSTRAINT [fk_tipo_clientes_barrios]
 GO
-/****** Object:  StoredProcedure [dbo].[SP_AHUMADA_1]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  StoredProcedure [dbo].[SP_AHUMADA_1]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-create procedure [dbo].[SP_AHUMADA_1]
+CREATE procedure [dbo].[SP_AHUMADA_1]
 AS
 begin
 select e2.empleado'EMPLEADO', year(f.fecha_factura)'AÑO', month(f.fecha_factura)'MES', prov.provincia'PROVINCIA', convert(int,avg(d.cantidad*d.precio_unitario))'PROMEDIO FACTURACION', sum(d.cantidad*d.precio_unitario)'FACTURACION', count(f.id_factura)'CANT. VENTAS'
@@ -446,7 +446,7 @@ join
 (select c.id_cliente
 from clientes c
 join tipo_clientes tc on tc.id_tipo_cliente = c.id_tipo_cliente
-where tc.tipo_cliente = 'concesionario'
+--where tc.tipo_cliente = 'concesionario'
 ) as c2 on c2.id_cliente = c.id_cliente
 join
 (select e.id_empleado,upper(substring(p.nombre,1,1))+'.'+
@@ -460,7 +460,9 @@ from pedidos
 where id_factura is not null
 )
 ) as e2 on e2.id_empleado = p.id_empleado
-where datediff(month,f.fecha_factura,getdate())<2 and d.id_factura is not null
+where month(f.fecha_factura)= 9
+--and (month,f.fecha_factura,getdate())<2 
+and d.id_factura is not null
 and prov.provincia = 'Córdoba'
 group by e2.empleado, year(f.fecha_factura), month(f.fecha_factura),prov.provincia
 having avg(d.cantidad*d.precio_unitario)>=
@@ -469,20 +471,22 @@ from facturas f
 join detalles d on d.id_factura = f.id_factura
 where datediff(month,f.fecha_factura,getdate())=2
 )
+order by 5
 end;
 GO
-/****** Object:  StoredProcedure [dbo].[SP_AHUMADA_2]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  StoredProcedure [dbo].[SP_AHUMADA_2]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-create procedure [dbo].[SP_AHUMADA_2]
+CREATE procedure [dbo].[SP_AHUMADA_2]
 AS
 BEGIN
-select c2.tcliente TIPO, upper(substring(p.nombre,1,1))+lower(substring(p.apellido,2,100))+' '+
+select c2.tcliente 'TIPO CLIENTE', upper(substring(p.nombre,1,1))+lower(substring(p.apellido,2,100))+' '+
 upper(substring(p.apellido,1,1))+lower(substring(p.apellido,2,100))CLIENTE,
-prov.provincia PROVINCIA, ciu.ciudad CIUDAD, upper(substring(b.barrio,1,1))+
-lower(substring(b.barrio,2,100)) BARRIO, lower(tc.contacto) CONTACTO,'17%' DESCUENTO
+prov.provincia PROVINCIA, ciu.ciudad CIUDAD, 
+--upper(substring(b.barrio,1,1))+lower(substring(b.barrio,2,100)) BARRIO,
+lower(tc.contacto) CONTACTO,'17%' DESCUENTO
 from personas p
 join clientes c on p.id_persona = c.id_persona
 join tipo_clientes tc on tc.id_tipo_cliente = c.id_tipo_cliente
@@ -504,8 +508,9 @@ and tc.contacto LIKE '%@%' and tc.contacto is not null
 union
 select c2.tcliente, upper(substring(p.nombre,1,1))+lower(substring(p.apellido,2,100))+' '+
 upper(substring(p.apellido,1,1))+lower(substring(p.apellido,2,100)),
-prov.provincia, ciu.ciudad, upper(substring(b.barrio,1,1))+
-lower(substring(b.barrio,2,100)), lower(tc.contacto),'13%'
+prov.provincia, ciu.ciudad, 
+--upper(substring(b.barrio,1,1))+lower(substring(b.barrio,2,100)),
+lower(tc.contacto),'13%'
 from personas p
 join clientes c on p.id_persona = c.id_persona
 join tipo_clientes tc on tc.id_tipo_cliente = c.id_tipo_cliente
@@ -526,7 +531,7 @@ where datediff(day,f.fecha_factura,getdate())<=30
 and tc.contacto LIKE '%@%' and tc.contacto is not null
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[SP_GUIZZO_1]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  StoredProcedure [dbo].[SP_GUIZZO_1]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -557,7 +562,7 @@ group by  year(p.fecha_pedido)
 ,UPPER(SUBSTRING(pr.descripcion,1,1))+LOWER(SUBSTRING(pr.descripcion,2,len(pr.descripcion)-1))
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[SP_GUIZZO_2]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  StoredProcedure [dbo].[SP_GUIZZO_2]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -589,7 +594,7 @@ select year(fecha_pedido) as 'Año',pf.apellido 'Apellido'
 									where year(p1.fecha_pedido) = year(p.fecha_pedido))
 end;
 GO
-/****** Object:  StoredProcedure [dbo].[SP_VILLARRUEL_1]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  StoredProcedure [dbo].[SP_VILLARRUEL_1]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -611,7 +616,7 @@ group by c.id_cliente, pers.apellido,pers.nombre,MONTH(f.fecha_factura)
 having SUM(d.cantidad*d.precio_unitario)>= AVG(d.cantidad*d.precio_unitario)
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[SP_VILLARRUEL_2]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  StoredProcedure [dbo].[SP_VILLARRUEL_2]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -634,7 +639,7 @@ having AVG(d.precio_unitario*d.cantidad)<(select AVG(d.precio_unitario*d.cantida
                                             )
 end
 GO
-/****** Object:  StoredProcedure [dbo].[SP_VITELLI_1]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  StoredProcedure [dbo].[SP_VITELLI_1]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -670,7 +675,7 @@ HAVING	COUNT(d.id_producto) =	(SELECT COUNT(d.id_producto)
 										MONTH(f.fecha_factura)= MONTH(GETDATE())				 
 								)
 GO
-/****** Object:  StoredProcedure [dbo].[SP_VITELLI_2]    Script Date: 23/10/2022 23:02:21 ******/
+/****** Object:  StoredProcedure [dbo].[SP_VITELLI_2]    Script Date: 26/10/2022 23:09:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

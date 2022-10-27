@@ -71,7 +71,7 @@ namespace ConsultasAutomotriz
             ///////////////////////////////////////////////////////////////////////////////////////////
             if (cboIntegrante.Text == "Federico-Ahumada" && rbC1.Checked == true)
             {
-                string input = "Se necesita saber que impacto tuvieron las ventas a concesionarias\nen articulos mayores o iguales a $10000 en la provincia de Córdoba en septiembre.\n-Detallar el promedio, la cantidad de ventas y el monto facturado por empleado.";
+                string input = "Se necesita saber que impacto tuvieron las ventas de automoviles que fueron\nrealizadas por vendedores el mes de septiembre en la provincia de Córdoba.\nA modo de evaluación se requiere saber el promedio y monto de facturación\npor empleado.";
                 lstEnunciado.Items.Clear();
                 var lines = input.Split('\n').ToArray();
                 lstEnunciado.Items.AddRange(lines);
